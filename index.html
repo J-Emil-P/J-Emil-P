@@ -5,15 +5,25 @@
         <title>Emil Pettersson</title>
         <style>
             body {
-                background-color: white;
+                background-color: black;
                 font-family: Arial, Helvetica, sans-serif;
                 margin: 0px;
+                color: white;
+            }
+            h1 {
+                font-size: 250%;
+                text-align: center;
+            }
+            .light-mode {
+                background-color: white;
+                color: black;
             }
             .topnav {
                 background-color: #292929;
                 overflow: hidden;
                 width: 100%;
             }
+
             .topnav a {
                 float: left;
                 color: white;
@@ -28,6 +38,60 @@
             .topnav a.active {
                 background-color: #444444;
             }
+            .topnav button {
+                float: right;
+                color: white;
+                background-color: #292929;
+                font-size: 18px;
+                text-align: center;
+                padding: 12px 16px;
+                text-decoration: none;
+            }
+            .maincontent {
+                margin: 20px;
+            }
+            .bottom {
+                background-color: #292929;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 200px;
+            }
+            #bottomnav {
+                float: left;
+            }
+            #bottomnav1 {
+                float: right;
+            }
+            .bottom li {
+                margin-bottom: 10px;
+                list-style-type: none;
+            }
+            .bottom li a {
+                text-decoration: underline;
+                color: lightgray;
+            }
+            #social-media-icons {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+            }
+            #social-media-icon {
+                width: 30px;
+                height: 30px;
+            }
+            #social-media-icon:hover {
+                transform: scale(1.2, 1.2);
+                filter: invert();
+                transition: opacity 10000ms;
+                transition: all 200ms;
+            }
+            @media(max-width: 600px) {
+                #light-mode-b {
+                    display: none;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -35,7 +99,42 @@
             <a class="active" href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="about.html">About me</a>
+            <a href="contact.html">Contact me</a>
+    
+            <button id="light-mode-b" onclick="lightmode()">Toggle light mode</button>
         </div>
-        <h1>Home</h1>
+        <div class="maincontent">
+            <h1>Welcome to my website</h1>
+            <p style="color: red; text-align: center;">🛠 Under Construction 🛠</p>
+            
+            <h2>Projects</h2>
+            <div class="projects"></div>
+            <br>
+        </div>
+        <div class="bottom">
+            <br>
+            <ul id="bottomnav">
+                <li><a href="https://emilpettersson.com/">Home</a></li>
+                <li><a href="https://emilpettersson.com/projects">Projects</a></li>
+                <li><a href="https://emilpettersson.com/about">About me</a></li>
+                <li><a href="https://emilpettersson.com/contact">Contact me</a></li>
+            </ul>
+            <!-- <ul id="bottomnav1">
+                <li><a href="https://emilpettersson.com/">Home</a></li>
+                <li><a href="https://emilpettersson.com/projects">Projects</a></li>
+                <li><a href="https://emilpettersson.com/about">Page source</a></li>
+                <li><a href="https://emilpettersson.com/contact">Full source code</a></li>
+            </ul>-->
+            <br>
+            <div id="social-media-icons">
+                <a href="https://github.com/J-Emil-P" target="_blank"><img id="social-media-icon" src="image/icons/github.svg" alt="github"></a>
+            </div>
+        </div>
+        <script>
+            function lightmode() {
+               var element = document.body;
+               element.classList.toggle("light-mode");
+            }
+        </script>
     </body>
 </html>
