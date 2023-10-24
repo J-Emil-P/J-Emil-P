@@ -101,9 +101,12 @@
                 transform: scale(1.2, 1.2) translateY(8px);
                 transition: all 200ms;
             }
-            @media(max-width: 600px) {
+            @media(max-width: 1000px) {
                 body {
                     min-height: 800px;
+                }
+                .card {
+                    width: 500px;
                 }
             }
             .projects {
@@ -119,8 +122,9 @@
             #cards {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 8px;  
-                max-width: 916px;
+                gap: 12px;  
+                max-width: 1000px;
+                left: 50%;
                 width: calc(100% - 20px);
             }
 
@@ -314,8 +318,8 @@
                           </div>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="card" id="clickableDiv">
+                    <a href="javascript:void(0)">
+                        <div class="card" id="undisclosedPopup">
                           <div class="card-content">
                             <div class="card-image">
                                 <i class="fa-solid fa-bug"></i>
@@ -336,6 +340,27 @@
                 </div>
             </div>
             <br>
+            <div class="timeline">
+                <h2>My timeline</h2>
+                <div class="timecard">
+                    <div class="timecard-text">
+                        <h3>Website creation</h3>
+                        <h4>Creation of the website you are on right now</h4>
+                    </div>
+                </div>
+                <div class="timecard">
+                    <div class="timecard-text">
+                        <h3>Meta bug bounty</h3>
+                        <h4>Got a bug bounty from meta/facebook</h4>
+                    </div>
+                </div>
+                <div class="timecard">
+                    <div class="timecard-text">
+                        <h3>Pi pico remote</h3>
+                        <h4>Created a way to remotely sign in to computer via wifi</h4>
+                    </div>
+                </div>
+            </div>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="bottom">
@@ -371,12 +396,12 @@
                 };
             }
             // Get a reference to the <div> element
-            var clickableDiv = document.getElementById("clickableDiv");
+            var undisclosedPopup = document.getElementById("undisclosedPopup");
 
             // Add a click event listener to the <div>
-            clickableDiv.addEventListener("click", function() {
+            undisclosedPopup.addEventListener("click", function() {
                 // This function will be executed when the <div> is clicked
-                alert("You clicked the <div>!");
+                alert("This bug report is currently undisclosed");
             });
         </script>
     </body>
