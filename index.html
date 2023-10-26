@@ -54,7 +54,7 @@
             .bottom {
                 background-color: #292929;
                 width: 100%;
-                height: 200px;
+                height: 250px;
             }
             #bottomnav {
                 position: absolute;
@@ -72,13 +72,14 @@
                 color: lightgray;
             }
             #social-media-icons {
-                position: absolute;
-                left: 50%;
-                float: left;
+                display: flex;
+                justify-content: center;
+                font-size: 140%;
+                margin-top: 20px;
             }
             #social-media-icon {
                 color: lightgray;
-                margin: 6px;
+                margin: 10px;
             }
             #social-media-icon:hover {
                 transform: scale(1.2, 1.2);
@@ -86,25 +87,16 @@
                 transition: all 200ms;
             }
             #h1-icon {
-                transform: translateY(10px);
+                transform: scale(1.4, 1.4) translateY(-5px);
             }
             #h1-icon:hover {
-                transform: scale(1.2, 1.2) translateY(8px);
+                transform: scale(1.6, 1.6) translateY(-4px);
                 transition: all 200ms;
-            }
-            @media(max-width: 1000px) {
-                body {
-                    min-height: 800px;
-                }
-                .card {
-                    width: 500px;
-                }
             }
             .projects {
                 align-items: center;
                 background-color: var(--bg-color);
                 display: flex;
-                
                 justify-content: center;
                 margin: 0px;
                 overflow: hidden;
@@ -284,7 +276,7 @@
                 content: "";
                 position: absolute;
                 width: 50%;
-                border: solid white;
+                border: solid #303436;
             }
             
             /* Setting the border of top, bottom, left */
@@ -360,7 +352,7 @@
                 position: absolute;
                 width: 10px;
                 height: 10px;
-                background: white;
+                background: #5d6163;
                 border-radius: 999px;
                 border: 3px solid green;
             }
@@ -404,6 +396,153 @@
             /* setting dot to the right if the card is odd */
             .timecard:nth-child(odd) > .timecardinfo > .timecardtitle::before {
                 left: -45px;
+            }
+            /* Extra small devices (portrait phones, less than 576px) */
+            @media (max-width: 575.98px) {
+                p {
+                    font-size: 200%;
+                }
+                h1 {
+                    font-size: 400%;
+                }
+                h2 {
+                    font-size: 300%;
+                }
+                .card-info-title > h3 {
+                    font-size: 250%;
+                }
+                .card-info-title > h4 {
+                    font-size: 200%;
+                }
+                .card {
+                    width: 500px;
+                }
+                .timecardinfo > h3 {
+                    font-size: 250%;
+                }
+                .timecardinfo > h4 {
+                    font-size: 200%;
+                }
+                .timecardinfo > p {
+                    font-size: 200%;
+                }
+                .card-info > i {
+                    font-size: 200%;
+                }
+                li {
+                    font-size: 150%;
+                }
+                #social-media-icons {
+                    font-size: 140%;
+                    margin-top: 80px;
+                }
+                #h1-icon {
+                    transform: scale(1.8, 1.8) translateY(-10px);
+                    margin: 15px;
+                }
+                #h1-icon:hover {
+                    transform: scale(2, 2) translateY(-8px);
+                    transition: all 200ms;
+                }
+                .bottom {
+                    height: 300px;
+            }
+            }
+
+            /* Small devices (landscape phones, 576px and up) */
+            @media (min-width: 576px) and (max-width: 767.98px) {
+                p {
+                    font-size: 200%;
+                }
+                h1 {
+                    font-size: 400%;
+                }
+                h2 {
+                    font-size: 300%;
+                }
+                .card-info-title > h3 {
+                    font-size: 250%;
+                }
+                .card-info-title > h4 {
+                    font-size: 200%;
+                }
+                .card {
+                    width: 560px;
+                }
+                .timecardinfo > h3 {
+                    font-size: 250%;
+                }
+                .timecardinfo > h4 {
+                    font-size: 200%;
+                }
+                .timecardinfo > p {
+                    font-size: 200%;
+                }
+                .card-info > i {
+                    font-size: 200%;
+                }
+                li {
+                    font-size: 150%;
+                }
+                #social-media-icons {
+                    font-size: 180%;
+                }
+                #h1-icon {
+                    transform: scale(2, 2) translateY(-10px);
+                    margin: 20px;
+                }
+                #h1-icon:hover {
+                    transform: scale(2.3, 2.3) translateY(-8px);
+                    transition: all 200ms;
+                }
+            }
+
+            /* Medium devices (tablets, 768px and up) */
+            @media (min-width: 768px) and (max-width: 991.98px) {
+                p {
+                    font-size: 200%;
+                }
+                h1 {
+                    font-size: 400%;
+                }
+                h2 {
+                    font-size: 300%;
+                }
+                .card-info-title > h3 {
+                    font-size: 250%;
+                }
+                .card-info-title > h4 {
+                    font-size: 200%;
+                }
+                .card {
+                    width: 770px;
+                }
+                .timecardinfo > h3 {
+                    font-size: 250%;
+                }
+                .timecardinfo > h4 {
+                    font-size: 200%;
+                }
+                .timecardinfo > p {
+                    font-size: 200%;
+                }
+                .card-info > i {
+                    font-size: 200%;
+                }
+                li {
+                    font-size: 200%;
+                }
+                #social-media-icons {
+                    font-size: 250%;
+                }
+                #h1-icon {
+                    transform: scale(2.5, 2.5) translateY(-10px);
+                    margin: 30px;
+                }
+                #h1-icon:hover {
+                    transform: scale(3, 3) translateY(-8px);
+                    transition: all 200ms;
+                }
             }
         </style>
     </head>
@@ -505,6 +644,8 @@
                   </div>
                 </div>
             </div>
+        </div>
+
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="bottom">
             <br>
