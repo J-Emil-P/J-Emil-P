@@ -397,6 +397,44 @@
             .timecard:nth-child(odd) > .timecardinfo > .timecardtitle::before {
                 left: -45px;
             }
+            .contact-card {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                height: 400px;
+                width: 80%;  
+                color: whitesmoke;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .contact-card-image {
+                font-size: 7em;
+                opacity: 0.25;
+                margin: 50px;
+                position: absolute;
+            }
+            .contact-card-info-title {
+                margin-top: 160px;
+                margin-left: 60px;
+            }
+            .contact-card-info-title > h3 {
+                color: lightgray;
+            }
+            .contact-card-item {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                height: 60px;
+                width: 40%;  
+                position: relative;
+                right: -55%;
+            }
+            .contact-card-content {
+                font-size: 40px;
+                align-items: center;
+                display: flex;
+                height: 60px;
+                justify-content: center;
+                overflow: hidden;
+            }
             /* Extra small devices (portrait phones, less than 576px) */
             @media (max-width: 575.98px) {
                 p {
@@ -645,7 +683,27 @@
                 </div>
             </div>
         </div>
-
+        <div class="contact-card">
+            <div class="contact-card-image">
+                <i class="fa-regular fa-address-book"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-satellite" style="opacity: 0;"></i>
+                <div class="contact-card-info-title">
+                    <h3>Contact me</h3>  
+                </div>    
+            </div>
+            <div class="contact-card-list">
+                <div class="contact-card-item">
+                    <a href="mailto:emil.j.pettersson@outlook.com">
+                        <div class="contact-card-content">
+                            <i class="fa-regular fa-envelope"></i>
+                            <h4>Email</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="bottom">
             <br>
