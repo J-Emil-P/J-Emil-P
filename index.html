@@ -28,6 +28,7 @@
                 background-color: #292929;
                 overflow: hidden;
                 width: 100%;
+                max-height: 50px;
             }
 
             .topnav a {
@@ -397,6 +398,10 @@
             .timecard:nth-child(odd) > .timecardinfo > .timecardtitle::before {
                 left: -45px;
             }
+            .contact-card-wrap {
+                display: flex;
+                justify-content: center;
+            }
             .contact-card {
                 background-color: rgba(255, 255, 255, 0.1);
                 border-radius: 10px;
@@ -405,6 +410,7 @@
                 color: whitesmoke;
                 margin-left: 10%;
                 margin-right: 10%;
+                max-width: 1000px;
             }
             .contact-card-image {
                 font-size: 7em;
@@ -419,6 +425,9 @@
             .contact-card-info-title > h3 {
                 color: lightgray;
             }
+            .contact-card-list {
+                margin-top: -100px;
+            }
             .contact-card-item {
                 background-color: rgba(255, 255, 255, 0.1);
                 border-radius: 10px;
@@ -426,6 +435,7 @@
                 width: 40%;  
                 position: relative;
                 right: -55%;
+                margin-top: 15px;
             }
             .contact-card-content {
                 font-size: 40px;
@@ -434,6 +444,28 @@
                 height: 60px;
                 justify-content: center;
                 overflow: hidden;
+            }
+            .contact-card-item > a {
+                text-decoration: none;
+            }
+            #scrollBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                border: none;
+                outline: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+
+            #scrollBtn:hover {
+                background-color: #555; /* Add a dark-grey background on hover */
             }
             /* Extra small devices (portrait phones, less than 576px) */
             @media (max-width: 575.98px) {
@@ -683,28 +715,39 @@
                 </div>
             </div>
         </div>
-        <div class="contact-card">
-            <div class="contact-card-image">
-                <i class="fa-regular fa-address-book"></i>
-            </div>
-            <div>
-                <i class="fa-solid fa-satellite" style="opacity: 0;"></i>
-                <div class="contact-card-info-title">
-                    <h3>Contact me</h3>  
-                </div>    
-            </div>
-            <div class="contact-card-list">
-                <div class="contact-card-item">
-                    <a href="mailto:emil.j.pettersson@outlook.com">
-                        <div class="contact-card-content">
-                            <i class="fa-regular fa-envelope"></i>
-                            <h4>Email</h4>
-                        </div>
-                    </a>
+        <div class="contact-card-wrap">
+            <div class="contact-card">
+                <div class="contact-card-image">
+                    <i class="fa-regular fa-address-book"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-satellite" style="opacity: 0;"></i>
+                    <div class="contact-card-info-title">
+                        <h3>Contact me</h3>
+                    </div>
+                </div>
+                <div class="contact-card-list">
+                    <div class="contact-card-item">
+                        <a href="mailto:emil.j.pettersson@outlook.com">
+                            <div class="contact-card-content">
+                                <i class="fa-regular fa-envelope"></i>
+                                <h4>Email</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-card-item">
+                        <a href="mailto:emil.j.pettersson@outlook.com">
+                            <div class="contact-card-content">
+                                <i class="fa-brands fa-github"></i>
+                                <h4>Github</h4>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button onclick="topFunction()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button> 
         <div class="bottom">
             <br>
             <ul id="bottomnav">
@@ -745,6 +788,25 @@
                 // This function will be executed when the <div> is clicked
                 alert("This bug report is currently undisclosed");
             });
+            // Get the button:
+            let scrollbutton = document.getElementById("scrollBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    scrollbutton.style.display = "block";
+                } else {
+                    scrollbutton.style.display = "none";
+                }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
         </script>
     </body>
 </html>
