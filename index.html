@@ -5,6 +5,7 @@
         <title>Emil Pettersson</title>
         <script src="https://kit.fontawesome.com/d5ae77c6b6.js" crossorigin="anonymous"></script>
         <style>
+            /* Navigation */
             :root {
               --bg-color: rgb(0, 0, 0);
               --card-color: rgb(34, 34, 34);
@@ -93,6 +94,17 @@
             #h1-icon:hover {
                 transform: scale(1.6, 1.6) translateY(-4px);
                 transition: all 200ms;
+            }
+            /* Content */
+            .aboutme {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            .aboutme-background {
+                background-color: #222222;
+                height: 100px;
+                width: 50%;
             }
             .projects {
                 align-items: center;
@@ -627,6 +639,11 @@
             <h1>Welcome to my website</h1>
             <p style="color: red; text-align: center;">🛠 Under Construction 🛠</p>
             <br>
+            <div class="aboutme">
+                <div class="aboutme-background">
+                    <p>Hello</p>
+                </div>
+            </div>
             <h2 id="project-h">Projects</h2>
             <div class="projects">
                 <div id="cards">
