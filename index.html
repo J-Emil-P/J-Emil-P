@@ -636,8 +636,8 @@
         <div class="topnav">
             <a class="active" href="index.html">Home</a>
             <a href="#timeline-h">Timeline</a>
-            <a href="contact.html">Contact me</a>
-            <a href="se/index.html" id="swe-link">🇸🇪 Svenska</a>
+            <!--<a href="contact.html">Contact me</a>-->
+            <a href="javascript:void(0)" id="swe-link">🇸🇪 Svenska</a>
         </div>
         <div class="maincontent">
             <h1>Welcome to my website</h1>
@@ -812,12 +812,18 @@
             }
             // Get a reference to the <div> element
             var undisclosedPopup = document.getElementById("undisclosedPopup");
+            var swePopup = document.getElementById("swe-link");
 
             // Add a click event listener to the <div>
             undisclosedPopup.addEventListener("click", function() {
                 // This function will be executed when the <div> is clicked
                 alert("This bug report is currently undisclosed");
             });
+            swePopup.addEventListener("click", function() {
+                // This function will be executed when the <div> is clicked
+                alert("Site will be translated soon™");
+            });
+
             // Get the button:
             let scrollbutton = document.getElementById("scrollBtn");
 
