@@ -95,6 +95,10 @@
                 transform: scale(1.6, 1.6) translateY(-4px);
                 transition: all 200ms;
             }
+            #copyrightlabel {
+                display: flex;
+                justify-content: center;
+            }
             /* Content */
             .aboutme {
                 align-items: center;
@@ -640,9 +644,9 @@
             <p style="color: red; text-align: center;">🛠 Under Construction 🛠</p>
             <br>
             <div class="aboutme">
-                <div class="aboutme-background">
+                <!--<div class="aboutme-background">
                     <p>Hello</p>
-                </div>
+                </div>-->
             </div>
             <h2 id="project-h">Projects</h2>
             <div class="projects">
@@ -710,9 +714,9 @@
                 <div class="outer">
                     <div class="timecard">
                         <div class="timecardinfo">
-                          <h3 class="timecardtitle">Meta bug bounty | Hackerone</h3>
+                          <h3 class="timecardtitle">Meta bug bounty | Hackerone | $500+</h3>
                           <h4>November 2023</h4>
-                          <p>This bug report is currently undisclosed and there are no plans to disclose any bug info.</p>
+                          <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.</p>
                         </div>
                     </div>
                   <div class="timecard">
@@ -724,9 +728,9 @@
                   </div>
                   <div class="timecard">
                     <div class="timecardinfo">
-                      <h3 class="timecardtitle">Meta bug bounty | Hackerone</h3>
+                      <h3 class="timecardtitle">Meta bug bounty | Hackerone | $500+</h3>
                       <h4>September 2023</h4>
-                      <p>This bug report is currently undisclosed and there are no plans to disclose any bug info.</p>
+                      <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.</p>
                     </div>
                   </div>
                   <div class="timecard">
@@ -739,7 +743,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact-card-wrap">
+        <div class="contact-card-wrap"> <!--remove-->
             <div class="contact-card">
                 <div class="contact-card-image">
                     <i class="fa-regular fa-address-book"></i>
@@ -769,7 +773,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!--remove till here-->
+
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <button onclick="topFunction()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button> 
         <div class="bottom">
@@ -792,6 +797,7 @@
                 <a href="https://hackerone.com/emil_p" target="_blank"><img src="Hackerone logo-1.svg" alt="Hackerone" id="h1-icon"></a>
                 <a href="mailto:contact@emilpettersson.com" target="_blank"><i class="fa-regular fa-envelope fa-2xl" id="social-media-icon"></i></a>
             </div>
+            <p id="copyrightlabel">© 2023 Emil Pettersson</p>
         </div>
         <script>
             document.getElementById("cards").onmousemove = e => {
