@@ -1,3 +1,6 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0e518f,100:8f319a&height=300&section=header&text=Emil%20Pettersson&fontSize=90&fontColor=f2f2f2"/>
+
+
 <h1 align="center">Hi 👋, I'm Emil Pettersson</h1>
 <h3 align="center">A passionate developer and bug hunter from Sweden</h3>
 
