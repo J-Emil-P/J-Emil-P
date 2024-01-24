@@ -9,6 +9,7 @@
             :root {
               --bg-color: rgb(0, 0, 0);
               --card-color: rgb(34, 34, 34);
+              --item-color: #2C2B33;
             }
             body {
                 background-color: black;
@@ -99,16 +100,85 @@
                 display: flex;
                 justify-content: center;
             }
-            /* Content */
+            /* ---Content--- */
+
+            /* aboutme */
             .aboutme {
-                align-items: center;
-                justify-content: center;
-                display: flex;
+                padding-left: 10%;
+                width: 80%;
+                height: 500px;
+                max-width: 1500px;
             }
-            .aboutme-background {
-                background-color: #222222;
-                height: 100px;
-                width: 50%;
+            .aboutmeBack {
+                background-color: rgba(34, 34, 34, 0.5);
+                height: 100%;
+                border-radius: 10px;
+                background-image: url(./contactcard/img/background.svg);
+                background-size: cover;
+            }
+            .contactB-list > a {
+                text-decoration: none;
+            }
+
+            .contactB-list > h3 {
+                font-size: xx-large;
+                position: relative;
+                left: 616px;
+                top: 25px;
+            }
+            .contactB {
+                width: 300px;
+                height: 60px;
+                border-radius: 10px;
+                background-color: var(--item-color);
+
+                position: relative;
+                left: 600px;
+                top: 15px;
+                margin-top: -15px;
+
+                color: white;
+
+                box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+            }
+            .contactB:hover {
+                box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+                transform: translateY(1px);
+                transition: 150ms all;
+            }
+            
+            .contactB > p {
+                font-size: 30px;
+                padding-top: 13px;
+                text-align: center;
+            }
+
+            #cont-email-icon {
+                position: absolute;
+                padding-top: 7px;
+                padding-left: 20px;
+            }
+            #cont-github-icon {
+                position: absolute;
+                padding-top: 7px;
+                padding-left: 20px;
+            }
+            #cont-hackerone-icon {
+                position: absolute;
+                padding-top: 7px;
+                padding-left: 20px;
+            }
+            #cont-donate-icon {
+                position: absolute;
+                padding-top: 0px;
+                padding-left: 4px;
+            }
+
+            #contactcardiframe { /* removeeeeeeeeeeee */
+                height: 1000px;
+                width: 100%;
+                overflow: hidden;
+                border: none;
             }
             .projects {
                 align-items: center;
@@ -644,14 +714,22 @@
             <p style="color: red; text-align: center;">🛠 Under Construction 🛠</p>
             <br>
             <div class="aboutme">
-                <!--<div class="aboutme-background">
-                    <p>Hello</p>
-                </div>-->
+                <!--<iframe src="contactcard/index.html" id="contactcardiframe"></iframe>-->
+                <div class="aboutmeBack">
+                    <div class="contactB-list">
+                        <h3>Contact & Socials</h3>
+                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-email-icon" src="contactcard/img/envelope-regular.svg"><p>Email</p></div></a>
+                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-github-icon" src="contactcard/img/github.svg"><p>Github</p></div></a>
+                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-hackerone-icon" src="contactcard/img/hackerone.svg"><p>HackerOne</p></div></a>
+                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-donate-icon" src="contactcard/img/buy-me-a-coffee.svg"><p>Donate</p></div></a>
+                    </div>
+
+                </div>
             </div>
             <h2 id="project-h">Projects</h2>
             <div class="projects">
                 <div id="cards">
-                    <a href="about.html"> <!--replace website soom (tm)-->
+                    <a href="about.html"> <!--replace website soon (tm)-->
                         <div class="card">
                             <div class="card-content">
                               <div class="card-image">
@@ -797,7 +875,7 @@
                 <a href="https://hackerone.com/emil_p" target="_blank"><img src="Hackerone logo-1.svg" alt="Hackerone" id="h1-icon"></a>
                 <a href="mailto:contact@emilpettersson.com" target="_blank"><i class="fa-regular fa-envelope fa-2xl" id="social-media-icon"></i></a>
             </div>
-            <p id="copyrightlabel">© 2023 Emil Pettersson</p>
+            <p id="copyrightlabel">© 2024 Emil Pettersson</p>
         </div>
         <script>
             document.getElementById("cards").onmousemove = e => {
