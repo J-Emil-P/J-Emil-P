@@ -10,6 +10,7 @@
               --bg-color: rgb(0, 0, 0);
               --card-color: rgb(34, 34, 34);
               --item-color: #2C2B33;
+              --slightly-darker-white: #cecece;
             }
             body {
                 background-color: black;
@@ -107,7 +108,6 @@
                 padding-left: 10%;
                 width: 80%;
                 height: 500px;
-                max-width: 1500px;
             }
             .aboutmeBack {
                 background-color: rgba(34, 34, 34, 0.5);
@@ -116,15 +116,48 @@
                 background-image: url(./contactcard/img/background.svg);
                 background-size: cover;
             }
+            .ProfileImageEtc {
+                position: absolute;
+                width: 372px;
+                height: 495px;
+                text-align: center;
+                margin-top: 20px;
+                left: calc(50% - 400px)
+            }
+            .ProfileImageEtc > img {
+                width: 200px;
+                height: 200px;
+                margin-top: 35px;
+            }
+            .ProfileImageEtc > h2 {
+                margin-top: 5px;
+                margin-bottom: 2px;
+                font-size: xx-large;
+                
+            }
+            .ProfileImageEtc > h4 {
+                color: var(--slightly-darker-white);
+            }
+
+            .contactB-list {
+                position: absolute;
+                right: calc(50% - 400px);
+                
+            }
             .contactB-list > a {
                 text-decoration: none;
+                position: relative;
             }
 
             .contactB-list > h3 {
                 font-size: xx-large;
                 position: relative;
-                left: 616px;
                 top: 25px;
+                left: 25px;
+            }
+            .contactB-list > a {
+                position: relative;
+                top: 15px;
             }
             .contactB {
                 width: 300px;
@@ -133,8 +166,6 @@
                 background-color: var(--item-color);
 
                 position: relative;
-                left: 600px;
-                top: 15px;
                 margin-top: -15px;
 
                 color: white;
@@ -173,12 +204,14 @@
                 padding-top: 0px;
                 padding-left: 4px;
             }
-
-            #contactcardiframe { /* removeeeeeeeeeeee */
-                height: 1000px;
-                width: 100%;
-                overflow: hidden;
-                border: none;
+            .aboutmecardline {
+                position: absolute;
+                top: 570px;
+                width: 60%;
+                left: 20%;
+                border-top: 3px solid var(--item-color);
+                margin: 20px 0;
+                border-radius: 3px;
             }
             .projects {
                 align-items: center;
@@ -713,17 +746,21 @@
             <h1>Welcome to my website</h1>
             <p style="color: red; text-align: center;">🛠 Under Construction 🛠</p>
             <br>
-            <div class="aboutme">
-                <!--<iframe src="contactcard/index.html" id="contactcardiframe"></iframe>-->
+            <div class="aboutme" id="aboutmecard">
                 <div class="aboutmeBack">
+                    <div class="ProfileImageEtc">
+                        <img src="contactcard/img/profile-picture.png" alt="profile-picture">
+                        <h2>Emil Pettersson</h2>
+                        <h4>Swedish programmer<br>and bug hunter</h4>
+                    </div>
                     <div class="contactB-list">
                         <h3>Contact & Socials</h3>
-                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-email-icon" src="contactcard/img/envelope-regular.svg"><p>Email</p></div></a>
+                        <a href="mailto:emil.j.pettersson@outlook.com"><div class="contactB"><img id="cont-email-icon" src="contactcard/img/envelope-regular.svg"><p>Email</p></div></a>
                         <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-github-icon" src="contactcard/img/github.svg"><p>Github</p></div></a>
-                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-hackerone-icon" src="contactcard/img/hackerone.svg"><p>HackerOne</p></div></a>
-                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-donate-icon" src="contactcard/img/buy-me-a-coffee.svg"><p>Donate</p></div></a>
+                        <a href="https://hackerone.com/j-emil-p"><div class="contactB"><img id="cont-hackerone-icon" src="contactcard/img/hackerone.svg"><p>HackerOne</p></div></a>
+                        <a href="https://www.buymeacoffee.com/j_emil_p"><div class="contactB"><img id="cont-donate-icon" src="contactcard/img/buy-me-a-coffee.svg"><p>Donate</p></div></a>
                     </div>
-
+                    <div class="aboutmecardline"></div>
                 </div>
             </div>
             <h2 id="project-h">Projects</h2>
@@ -792,9 +829,9 @@
                 <div class="outer">
                     <div class="timecard">
                         <div class="timecardinfo">
-                          <h3 class="timecardtitle">Meta bug bounty | Hackerone | $500+</h3>
+                          <h3 class="timecardtitle">Meta bug bounty | Hackerone | Paid</h3>
                           <h4>November 2023</h4>
-                          <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.</p>
+                          <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.<br>Could be $500 could be $50 000.</p>
                         </div>
                     </div>
                   <div class="timecard">
@@ -806,16 +843,16 @@
                   </div>
                   <div class="timecard">
                     <div class="timecardinfo">
-                      <h3 class="timecardtitle">Meta bug bounty | Hackerone | $500+</h3>
+                      <h3 class="timecardtitle">Meta bug bounty | Hackerone | Paid</h3>
                       <h4>September 2023</h4>
-                      <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.</p>
+                      <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.<br>Could be $500 could be $50 000.</p>
                     </div>
                   </div>
                   <div class="timecard">
                     <div class="timecardinfo">
                       <h3 class="timecardtitle">Remote unlock pc</h3>
                       <h4>May 2023</h4>
-                      <p>Use a raspberry pi pico to remotely unlock your pc over wifi <br> <a href="https://github.com/J-Emil-P/unlock-pc-pico">Project on Github</a></p>
+                      <p>Use a raspberry pi pico to remotely unlock your pc over wifi <br> <a href="https://github.com/J-Emil-P/unlock-pc-pico" target="_blank">Project on Github</a></p>
                     </div>
                   </div>
                 </div>
@@ -861,7 +898,7 @@
                 <li><a href="https://emilpettersson.com/">Home</a></li>
                 <li><a href="#project-h">Projects</a></li>
                 <li><a href="#timeline-h">About me</a></li>
-                <li><a href="https://emilpettersson.com/contact">Contact me</a></li>
+                <li><a href="#aboutmecard">Contact me</a></li>
             </ul>
             <!-- <ul id="bottomnav1">
                 <li><a href="https://emilpettersson.com/">---</a></li>
@@ -872,7 +909,7 @@
             <br><br><br><br><br><br><br>
             <div id="social-media-icons">
                 <a href="https://github.com/J-Emil-P" target="_blank"><i class="fa-brands fa-github fa-2xl" id="social-media-icon"></i></a>
-                <a href="https://hackerone.com/emil_p" target="_blank"><img src="Hackerone logo-1.svg" alt="Hackerone" id="h1-icon"></a>
+                <a href="https://hackerone.com/j-emil-p" target="_blank"><img src="Hackerone logo-1.svg" alt="Hackerone" id="h1-icon"></a>
                 <a href="mailto:contact@emilpettersson.com" target="_blank"><i class="fa-regular fa-envelope fa-2xl" id="social-media-icon"></i></a>
             </div>
             <p id="copyrightlabel">© 2024 Emil Pettersson</p>
