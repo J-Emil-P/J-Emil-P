@@ -4,7 +4,7 @@
 <h1 align="center">Hi 👋, I'm Emil Pettersson</h1>
 <h3 align="center">A passionate developer and bug hunter from Sweden</h3>
 
-- 🔭 I’m currently working on [My Website](emilpettersson.com)
+- 🔭 I’m currently working on [My Website](https://emilpettersson.com)
 
 - 🌱 I’m currently learning **XSS and JavaScript**
 
