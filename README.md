@@ -6,7 +6,7 @@
 
 - 🔭 I’m currently working on [My Website](https://emilpettersson.com)
 
-- 🌱 I’m currently learning **XSS and JavaScript**
+- 🌱 I’m currently learning **XSS** and **C#**
 
 - 📫 How to reach me **emil.j.pettersson@outlook.com**
 
