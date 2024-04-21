@@ -743,6 +743,11 @@
                 margin: 20px 0;
                 border-radius: 3px;
             }
+            .articlecontent {
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 10px;
+            }
             .aboutmeBack {
                 position: absolute;
                 height: 90%;
@@ -756,6 +761,22 @@
                 bottom: 10px;
                 left: calc(50% - 160px);
             }
+            th, td {
+                border:1px solid var(--slightly-darker-white);
+            }
+            th {
+                padding: 10px;
+            }
+            table {
+                border-collapse: collapse;
+                letter-spacing: 1px;
+            }
+            tr:nth-of-type(even) {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+            tr:last-of-type {
+                background-color: #0061812a;
+            }
         </style>
     </head>
     <body>
@@ -765,7 +786,38 @@
                 <div class="aboutmeBack">
                     <h1>Creating a website</h1>
                     <div class="articlecardline"></div>
-                    <p>Lorem ispum</p>
+                    <div class="articlecontent">
+                        <p>I want to first communicate that this website does not run any special backend and therefore this hosting option is not for everyone. All pages and files are public, and the site is written in HTML, CSS, and JavaScript. <br><br>Cost breakdown:</p>
+
+                        <table>
+                            <tr>
+                                <th>Service</th>
+                                <th>Company</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <th>Hosting</th>
+                                <th>GitHub</th>
+                                <th>free</th>
+                            </tr>
+                            <tr>
+                                <th>Domain</th>
+                                <th>Cloudflare</th>
+                                <th>$9.77/year</th>
+                            </tr>
+                            <tr>
+                                <th>DDOS protection</th>
+                                <th>Cloudflare</th>
+                                <th>free</th>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <th>-</th>
+                                <th>$9.77/year</th>
+                            </tr>
+                        </table>
+
+                    </div>
                     <p id="copyrightlabel">© 2024 Emil Pettersson | <a href="https://github.com/J-Emil-P/J-Emil-P/tree/main/licenses" target="_blank" style="text-decoration: underline; color: whitesmoke; margin-left: 5px;">View other licenses</a></p>
                 </div>
             </div>
