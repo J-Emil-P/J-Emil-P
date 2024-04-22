@@ -4,6 +4,7 @@
         <meta content="width=device-width, initial-scale=1">
         <title>Emil Pettersson</title>
         <script src="https://kit.fontawesome.com/d5ae77c6b6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="wave.css" />
         <style>
             /* Navigation */
             :root {
@@ -28,10 +29,13 @@
                 text-align: center;
             }
             .topnav {
-                background-color: #292929;
                 overflow: hidden;
                 width: 100%;
                 max-height: 50px;
+                position: sticky;
+                position: -webkit-sticky; /* Safari */
+                top: 10px;
+                z-index: 10;
             }
 
             .topnav a {
@@ -41,19 +45,29 @@
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                background-color: rgba(10, 10, 10, 0.5);
+            }
+            #lefttopnav {
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                margin-left: 10px;
+            }
+            #righttopnav {
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
             }
             #swe-link {
-                float: right;
+                position: absolute;
+                border-radius: 100px;
+                right: 10px;
             }
             .topnav a:hover {
-                background-color: darkgreen;
-                transition: all 700ms;
-            }
-            .topnav a.active {
-                background-color: #444444;
+                background-color: rgb(68, 0, 68);
+                transition: all 300ms;
             }
             .maincontent {
-                margin: 20px;
+                margin: 0px;
+                margin-top: -50px;
             }
             .bottom {
                 background-color: #292929;
@@ -153,7 +167,7 @@
                 font-size: xx-large;
                 position: relative;
                 top: 25px;
-                left: 25px;
+                left: 0px;
             }
             .contactB-list > a {
                 position: relative;
@@ -183,26 +197,25 @@
                 padding-top: 13px;
                 text-align: center;
             }
-
             #cont-email-icon {
                 position: absolute;
                 padding-top: 7px;
-                padding-left: 20px;
+                margin-left: -130px;
             }
             #cont-github-icon {
                 position: absolute;
                 padding-top: 7px;
-                padding-left: 20px;
+                margin-left: -130px;
             }
             #cont-hackerone-icon {
                 position: absolute;
                 padding-top: 7px;
-                padding-left: 20px;
+                margin-left: -130px;
             }
             #cont-donate-icon {
                 position: absolute;
                 padding-top: 0px;
-                padding-left: 4px;
+                margin-left: -146px;
             }
             .aboutmecardline {
                 position: absolute;
@@ -588,6 +601,22 @@
             }
             /* Extra small devices (portrait phones, less than 576px) */
             @media (max-width: 575.98px) {
+                .ProfileImageEtc {
+                    position: absolute;
+                    width: 372px;
+                    height: 495px;
+                    text-align: center;
+                    margin-top: -100px;
+                    left: calc(50% - 190px)
+                }
+                .contactB-list {
+                    position: absolute;
+                    right: calc(50% - 150px);
+                    margin-top: 220px;
+                }
+                .inner-header {
+                    height: 82vh;
+                }
                 p {
                     font-size: 200%;
                 }
@@ -640,6 +669,22 @@
 
             /* Small devices (landscape phones, 576px and up) */
             @media (min-width: 576px) and (max-width: 767.98px) {
+                .ProfileImageEtc {
+                    position: absolute;
+                    width: 372px;
+                    height: 495px;
+                    text-align: center;
+                    margin-top: -100px;
+                    left: calc(50% - 190px)
+                }
+                .contactB-list {
+                    position: absolute;
+                    right: calc(50% - 150px);
+                    margin-top: 230px;
+                }
+                .inner-header {
+                    height: 80vh;
+                }
                 p {
                     font-size: 200%;
                 }
@@ -737,32 +782,77 @@
     </head>
     <body>
         <div class="topnav">
-            <a class="active" href="index.html">Home</a>
-            <a href="#timeline-h">Timeline</a>
+            <div class="toppagenav">
+                <a href="index.html" id="lefttopnav">Home</a>
+                <a href="#timeline-h" id="righttopnav">Timeline</a>
+            </div>
             <!--<a href="contact.html">Contact me</a>-->
             <a href="javascript:void(0)" id="swe-link">🇸🇪 Svenska</a>
         </div>
         <div class="maincontent">
-            <h1>Welcome to my website</h1>
-            <p style="color: red; text-align: center;">🛠 Under Construction 🛠</p>
-            <br>
-            <div class="aboutme" id="aboutmecard">
-                <div class="aboutmeBack">
-                    <div class="ProfileImageEtc">
-                        <img src="contactcard/img/profile-picture.png" alt="profile-picture">
-                        <h2>Emil Pettersson</h2>
-                        <h4>Swedish programmer<br>and bug hunter</h4>
+            <div class="header">
+                <!--Content before waves-->
+                <div class="inner-header flex">
+                  <div class="aboutme" id="aboutmecard">
+                        <div class="ProfileImageEtc">
+                            <img src="contactcard/img/profile-picture.png" alt="profile-picture">
+                            <h2>Emil Pettersson</h2>
+                            <h4>Swedish programmer<br>and bug hunter</h4>
+                        </div>
+                        <div class="contactB-list">
+                            <h3>Contact & Socials</h3>
+                            <a href="mailto:emil.j.pettersson+site@outlook.com"><div class="contactB"><img id="cont-email-icon" src="contactcard/img/envelope-regular.svg"><p>Email</p></div></a>
+                            <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-github-icon" src="contactcard/img/github.svg"><p>Github</p></div></a>
+                            <a href="https://hackerone.com/j-emil-p"><div class="contactB"><img id="cont-hackerone-icon" src="contactcard/img/hackerone.svg"><p>HackerOne</p></div></a>
+                            <a href="https://www.buymeacoffee.com/j_emil_p"><div class="contactB"><img id="cont-donate-icon" src="contactcard/img/buy-me-a-coffee.svg"><p>Donate</p></div></a>
+                        </div>
+                        <!--<div class="aboutmecardline"></div>-->
                     </div>
-                    <div class="contactB-list">
-                        <h3>Contact & Socials</h3>
-                        <a href="mailto:emil.j.pettersson+site@outlook.com"><div class="contactB"><img id="cont-email-icon" src="contactcard/img/envelope-regular.svg"><p>Email</p></div></a>
-                        <a href="https://github.com/J-Emil-P"><div class="contactB"><img id="cont-github-icon" src="contactcard/img/github.svg"><p>Github</p></div></a>
-                        <a href="https://hackerone.com/j-emil-p"><div class="contactB"><img id="cont-hackerone-icon" src="contactcard/img/hackerone.svg"><p>HackerOne</p></div></a>
-                        <a href="https://www.buymeacoffee.com/j_emil_p"><div class="contactB"><img id="cont-donate-icon" src="contactcard/img/buy-me-a-coffee.svg"><p>Donate</p></div></a>
-                    </div>
-                    <div class="aboutmecardline"></div>
                 </div>
-            </div>
+          
+                <!--Waves Container-->
+                <div>
+                  <svg
+                    class="waves"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28"
+                    preserveAspectRatio="none"
+                    shape-rendering="auto"
+                  >
+                    <defs>
+                      <path
+                        id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                      />
+                    </defs>
+                    <g class="parallax">
+                      <use
+                        xlink:href="#gentle-wave"
+                        x="48"
+                        y="0"
+                        fill="rgba(0,0,0,0.7)"
+                      />
+                      <use
+                        xlink:href="#gentle-wave"
+                        x="48"
+                        y="3"
+                        fill="rgba(0,0,0,0.5)"
+                      />
+                      <use
+                        xlink:href="#gentle-wave"
+                        x="48"
+                        y="5"
+                        fill="rgba(0,0,0,0.3)"
+                      />
+                      <use xlink:href="#gentle-wave" x="48" y="7" fill="black" />
+                    </g>
+                  </svg>
+                </div>
+                <!--Waves end-->
+              </div>
+              <!--Header ends-->
+        
             <h2 id="project-h">Projects</h2>
             <div class="projects">
                 <div id="cards">
@@ -831,7 +921,7 @@
                         <div class="timecardinfo">
                           <h3 class="timecardtitle">Meta bug bounty | Hackerone | Paid</h3>
                           <h4>November 2023</h4>
-                          <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.<br>Could be $500 could be $50 000.</p>
+                          <p>This bug report is currently undisclosed.<br></p>
                         </div>
                     </div>
                   <div class="timecard">
@@ -845,7 +935,7 @@
                     <div class="timecardinfo">
                       <h3 class="timecardtitle">Meta bug bounty | Hackerone | Paid</h3>
                       <h4>September 2023</h4>
-                      <p>This bug report is currently undisclosed.<br>Meta has a minimum bug bounty of $500.<br>Could be $500 could be $50 000.</p>
+                      <p>This bug report is currently undisclosed.<br></p>
                     </div>
                   </div>
                   <div class="timecard">
