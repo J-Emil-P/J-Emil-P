@@ -812,8 +812,8 @@
     <body>
         <div class="topnav">
             <div class="toppagenav">
-                <a href="index.html" id="lefttopnav">Home</a>
-                <a href="#timeline-h" id="righttopnav">Timeline</a>
+                <a onclick="topScrollFunction()" id="lefttopnav">Home</a>
+                <a onclick="timelineScrollFunction()" id="righttopnav">Timeline</a>
             </div>
             <!--<a href="contact.html">Contact me</a>-->
             <a href="javascript:void(0)" id="swe-link">🇸🇪 Svenska</a>
@@ -982,14 +982,14 @@
         </div>
 
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <button onclick="topFunction()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button> 
+        <button onclick="topScrollFunction()" id="scrollBtn" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button> 
         <div class="bottom">
             <br>
             <ul id="bottomnav">
-                <li><a href="https://emilpettersson.com/">Home</a></li>
-                <li><a href="#project-h">Projects</a></li>
-                <li><a href="#timeline-h">About me</a></li>
-                <li><a href="#aboutmecard">Contact me</a></li>
+                <li><a onclick="topScrollFunction()">Home</a></li>
+                <li><a onclick="projectScrollFunction()">Projects</a></li>
+                <li><a onclick="timelineScrollFunction()">About me</a></li>
+                <li><a onclick="topScrollFunction()">Contact me</a></li>
             </ul>
             <!-- <ul id="bottomnav1">
                 <li><a href="https://emilpettersson.com/">---</a></li>
@@ -1045,9 +1045,26 @@
             }
             
             // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
+            function topScrollFunction() {
                 document.documentElement.scrollTo({
                   top: 0,
+                  behavior: "smooth"
+                });
+            } 
+
+            let timelineHeading = document.getElementById("timeline-h");
+            var timelinepos = timelineHeading.getBoundingClientRect();
+            function timelineScrollFunction() {
+                document.documentElement.scrollTo({
+                  top: timelinepos.top,
+                  behavior: "smooth"
+                });
+            } 
+            let projectsHeading = document.getElementById("project-h");
+            var projectpos = projectsHeading.getBoundingClientRect();
+            function projectScrollFunction() {
+                document.documentElement.scrollTo({
+                  top: projectpos.top,
                   behavior: "smooth"
                 });
             } 
