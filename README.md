@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on [My Website](https://emilpettersson.com/)
 
-- 🌱 I’m currently learning **XSS and JavaScript**
+- 🌱 I’m currently learning **Cybersecurity**
 
 - 📝 Check out my website https://emilpettersson.com
 
