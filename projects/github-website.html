@@ -19,6 +19,7 @@
                 color: white;
                 min-height: 800px;
                 overflow-y: scroll;
+                height: 100em;
             }
             h1 {
                 font-size: 250%;
@@ -110,7 +111,7 @@
                 height: 500px;
             }
             .aboutmeBack {
-                background-color: rgba(34, 34, 34, 0.5);
+                background-color: rgba(50, 50, 50, 0.5);
                 height: 100%;
                 border-radius: 10px;
                 background-image: url(./contactcard/img/background.svg);
@@ -686,52 +687,12 @@
                 }
             }
 
-            /* Medium devices (tablets, 768px and up) */
-            @media (min-width: 768px) and (max-width: 991.98px) {
-                p {
-                    font-size: 200%;
+            @media (max-width: 991.98px) {
+                .articlecardline {
+                    display: none;
+                    
                 }
-                h1 {
-                    font-size: 400%;
-                }
-                h2 {
-                    font-size: 300%;
-                }
-                .card-info-title > h3 {
-                    font-size: 250%;
-                }
-                .card-info-title > h4 {
-                    font-size: 200%;
-                }
-                .card {
-                    width: 770px;
-                }
-                .timecardinfo > h3 {
-                    font-size: 250%;
-                }
-                .timecardinfo > h4 {
-                    font-size: 200%;
-                }
-                .timecardinfo > p {
-                    font-size: 200%;
-                }
-                .card-info > i {
-                    font-size: 200%;
-                }
-                li {
-                    font-size: 200%;
-                }
-                #social-media-icons {
-                    font-size: 250%;
-                }
-                #h1-icon {
-                    transform: scale(2.5, 2.5) translateY(-10px);
-                    margin: 30px;
-                }
-                #h1-icon:hover {
-                    transform: scale(3, 3) translateY(-8px);
-                    transition: all 200ms;
-                }
+                
             }
             /*page specific or page override*/
             .articlecardline {
@@ -750,7 +711,7 @@
             }
             .aboutmeBack {
                 position: absolute;
-                height: 90%;
+                height: 90em;
                 width: 80%;
                 max-width: 1500px; 
                 margin-left: auto; 
@@ -770,6 +731,10 @@
             table {
                 border-collapse: collapse;
                 letter-spacing: 1px;
+                width: 30em;
+            }
+            th {
+                font-size: 150%;
             }
             tr:nth-of-type(even) {
                 background-color: rgba(255, 255, 255, 0.05);
@@ -781,7 +746,7 @@
     </head>
     <body>
         <div class="maincontent">
-            <a href="javascript:void(0)" id="swe-link">🇸🇪 Svenska</a>
+            <!--<a href="javascript:void(0)" id="swe-link">🇸🇪 Svenska</a>-->
             <div class="aboutme" id="aboutmecard">
                 <div class="aboutmeBack">
                     <h1>Creating a website</h1>
@@ -806,16 +771,13 @@
                                 <th>$9.77/year</th>
                             </tr>
                             <tr>
-                                <th>DDOS protection</th>
-                                <th>Cloudflare</th>
-                                <th>free</th>
-                            </tr>
-                            <tr>
                                 <th>Total</th>
                                 <th>-</th>
                                 <th>$9.77/year</th>
                             </tr>
                         </table>
+
+                        <p><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank">Here is the github docs</a> on how to set up your website, remember to add www domains too! <br>At least for me I had  to turn off Cloudflare proxy and have DNS only in order to get force HTTPS to work.</p>
 
                     </div>
                     <p id="copyrightlabel">© 2024 Emil Pettersson | <a href="https://github.com/J-Emil-P/J-Emil-P/tree/main/licenses" target="_blank" style="text-decoration: underline; color: whitesmoke; margin-left: 5px;">View other licenses</a></p>
