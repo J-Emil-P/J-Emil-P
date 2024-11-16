@@ -11,7 +11,7 @@
 
 - 📝 Check out my website https://emilpettersson.com
 
-- 📫 How to reach me **emil.j.pettersson@outlook.com**
+- 📫 How to reach me <a href="https://bsky.app/profile/emilpettersson.com>Bluesky: @emilpettersson.com</a> / emil.j.pettersson@outlook.com
 
 
 
