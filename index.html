@@ -95,21 +95,32 @@
                 font-size: 140%;
                 margin-top: 20px;
             }
-            #social-media-icon {
+            .social-media-icon {
                 color: lightgray;
                 margin: 10px;
+                transition: all 100ms;
             }
-            #social-media-icon:hover {
-                transform: scale(1.2, 1.2);
+            .social-media-icon:hover {
+                transform: scale(1.17, 1.17);
                 color: white;
                 transition: all 200ms;
             }
+            #bsky-social-media-icon:hover {
+                transform: scale(1.18, 1.18);
+            }
+            #github-social-media-icon:hover {
+                transform: scale(1.15, 1.15);
+            }
+            .bsky-footer {
+                color: white;
+            }
             #h1-icon {
                 transform: scale(1.4, 1.4) translateY(-5px);
+                transition: all 150ms;
             }
             #h1-icon:hover {
-                transform: scale(1.6, 1.6) translateY(-4px);
-                transition: all 200ms;
+                transform: scale(1.7, 1.7) translateY(-4px);
+                transition: all 300ms;
             }
             #copyrightlabel {
                 display: flex;
@@ -669,7 +680,7 @@
                 li {
                     font-size: 150%;
                 }
-                #social-media-icons {
+                .social-media-icons {
                     font-size: 140%;
                     margin-top: 80px;
                 }
@@ -1001,11 +1012,12 @@
             </ul>-->
             <br><br><br><br><br><br><br>
             <div id="social-media-icons">
-                <a href="https://github.com/J-Emil-P" target="_blank"><i class="fa-brands fa-github fa-2xl" id="social-media-icon"></i></a>
+                <a href="https://github.com/J-Emil-P" target="_blank"><i class="fa-brands fa-github fa-2xl social-media-icon" id="github-social-media-icon"></i></a>
                 <a href="https://hackerone.com/j-emil-p" target="_blank"><img src="Hackerone logo-1.svg" alt="Hackerone" id="h1-icon"></a>
-                <a href="mailto:emil.j.pettersson+site@outlook.com" target="_blank"><i class="fa-regular fa-envelope fa-2xl" id="social-media-icon"></i></a>
+                <a href="https://bsky.app/profile/emilpettersson.com" target="_blank"><i class="fa-brands fa-bluesky fa-2xl social-media-icon" id="bsky-social-media-icon" style="color: white; margin-right: 0; margin-left: 8px;"></i></a>
+                <a href="mailto:emil.j.pettersson+site@outlook.com" target="_blank"><i class="fa-regular fa-envelope fa-2xl social-media-icon"></i></a>
             </div>
-            <p id="copyrightlabel">© 2024 Emil Pettersson | <a href="https://github.com/J-Emil-P/J-Emil-P/tree/main/licenses" target="_blank" style="text-decoration: underline; color: whitesmoke; margin-left: 5px;">View other licenses</a></p>
+            <p id="copyrightlabel">© 2025 Emil Pettersson | <a href="https://github.com/J-Emil-P/J-Emil-P/tree/main/licenses" target="_blank" style="text-decoration: underline; color: whitesmoke; margin-left: 5px;">View other licenses</a></p>
         </div>
         <script>
             document.getElementById("cards").onmousemove = e => {
