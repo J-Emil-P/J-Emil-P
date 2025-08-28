@@ -86,7 +86,8 @@
             <h2 id="project-h">Projects</h2>
             <div class="projects">
                 <div id="cards">
-                    <a href="projects/github-website.html"> <!--replace website soon (tm)-->
+                    <!--<a href="projects/github-website.html">--> <!--replace website soon (tm)-->
+                    <a href="javascript:void(0)" id="blog-link">
                         <div class="card">
                             <div class="card-content">
                               <div class="card-image">
@@ -219,6 +220,7 @@
             // Get a reference to the <div> element
             var undisclosedPopup = document.getElementById("undisclosedPopup");
             var swePopup = document.getElementById("swe-link");
+            var blogPopup = document.getElementById("blog-link");
 
             // Add a click event listener to the <div>
             undisclosedPopup.addEventListener("click", function() {
@@ -228,6 +230,10 @@
             swePopup.addEventListener("click", function() {
                 // This function will be executed when the <div> is clicked
                 alert("Site will be translated soon™");
+            });
+            blogPopup.addEventListener("click", function() {
+                // This function will be executed when the <div> is clicked
+                alert("Blog page under construction");
             });
 
             // Get the button:
